@@ -1,0 +1,1256 @@
+/* =========================================================
+   HR TECHNOLOGY PORTFOLIO
+   BLACK / WHITE / BLUE EDITORIAL
+   BLUE-TINTED WHITE SECTIONS
+
+   IMPORTANT:
+   - NO linear-gradient()
+   - NO radial-gradient()
+   - NO gradient transitions
+   - NO section fade overlays
+   - WHITE SECTIONS USE SOLID BLUE-TINTED COLORS
+========================================================= */
+
+:root {
+    --white: #ffffff;
+
+    /* Blue-tinted whites inspired by logo */
+    --white-blue: #f7faff;
+    --white-blue-2: #f2f6ff;
+    --white-blue-3: #edf3ff;
+
+    --black: #050505;
+    --black-soft: #0d0d0f;
+
+    --text: #111111;
+    --text-light: #f5f5f5;
+    --text-muted: #8d8d94;
+
+    /* Logo-inspired blue palette */
+    --blue: #3155ff;
+    --blue-light: #6f8cff;
+    --blue-mid: #4d7fe8;
+    --cyan: #19b8c9;
+
+    --border-light: rgba(49, 85, 255, 0.13);
+    --border-dark: rgba(255, 255, 255, 0.13);
+
+    --shadow:
+        0 25px 70px rgba(0, 0, 0, 0.16);
+
+    --radius-md: 18px;
+    --radius-lg: 24px;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--white-blue);
+    color: var(--text);
+
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+::selection {
+    background: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   HEADER — BLACK
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #050505;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    max-width: 1200px;
+    min-height: 76px;
+
+    margin: 0 auto;
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    width: 150px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 60px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAV LINKS
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue-light);
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: var(--blue);
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO — BLUE-TINTED WHITE
+========================================================= */
+
+.hero {
+    position: relative;
+
+    max-width: 1200px;
+    min-height: 78vh;
+
+    margin: 0 auto;
+    padding: 125px 30px 135px;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--white-blue);
+}
+
+
+/* =========================================================
+   HERO BLUE ACCENT
+========================================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 120px;
+    right: 30px;
+
+    width: 90px;
+    height: 4px;
+
+    border-radius: 999px;
+
+    background: var(--blue);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.eyebrow,
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before,
+.section-label::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+h1 {
+    max-width: 900px;
+
+    margin-bottom: 32px;
+
+    color: #050505;
+
+    font-size:
+        clamp(
+            52px,
+            7.5vw,
+            88px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    text-wrap: balance;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+    max-width: 690px;
+
+    color: #45484f;
+
+    font-size: 19px;
+    line-height: 1.75;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #2f55ff 0%,
+    #4f7cff 45%,
+    #a8d8ef 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+    margin-top: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border: 1px solid #050505;
+    border-radius: 8px;
+
+    background: #050505;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+
+    background: var(--blue);
+    border-color: var(--blue);
+
+    box-shadow:
+        0 12px 30px
+        rgba(49, 85, 255, 0.25);
+}
+
+.button.secondary {
+    background: var(--white);
+    color: #050505;
+    border-color: #cbd5ea;
+}
+
+.button.secondary:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   ALL SECTIONS
+========================================================= */
+
+.section {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 30px;
+
+    border-top: none;
+}
+
+
+/* =========================================================
+   ABOUT — BLACK
+========================================================= */
+
+#about,
+.about {
+    position: relative;
+
+    max-width: none;
+
+    background: #050505;
+
+    color: white;
+
+    padding-left:
+        max(
+            30px,
+            calc((100vw - 1140px) / 2)
+        );
+
+    padding-right:
+        max(
+            30px,
+            calc((100vw - 1140px) / 2)
+        );
+
+    padding-top: 110px;
+}
+
+
+/* =========================================================
+   COMPLETELY REMOVE TRANSITIONS
+========================================================= */
+
+#about::before,
+.about::before,
+#projects::before,
+.projects::before,
+#skills::before,
+.skills-section::before,
+#contact::before,
+.contact::before {
+    display: none;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+#about > *,
+.about > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ABOUT HEADING
+========================================================= */
+
+#about h2,
+.about h2 {
+    color: #ffffff;
+}
+
+#about .section-label,
+.about .section-label {
+    color: var(--blue-light);
+}
+
+#about > p:not(.section-label),
+.about > p:not(.section-label) {
+    color: #b9bac0;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+h2 {
+    max-width: 800px;
+
+    margin-bottom: 25px;
+
+    color: #050505;
+
+    font-size:
+        clamp(
+            34px,
+            5vw,
+            48px
+        );
+
+    font-weight: 750;
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   SECTION BODY
+========================================================= */
+
+.section > p:not(.section-label) {
+    max-width: 720px;
+
+    color: #45484f;
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROJECTS — LIGHT BLUE WHITE
+========================================================= */
+
+#projects,
+.projects {
+    position: relative;
+
+    background: var(--white-blue-2);
+
+    padding-top: 110px;
+    padding-bottom: 145px;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+#projects > *,
+.projects > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.project-grid {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PROJECT CARDS
+========================================================= */
+
+.project-card {
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius: var(--radius-md);
+
+    background: #0d0d0f;
+
+    color: white;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card::before,
+.project-card::after {
+    display: none;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(49, 85, 255, 0.55);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.08),
+        0 15px 35px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
+
+.project-number {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 40px;
+
+    color: #85858d;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   PROJECT HEADING
+========================================================= */
+
+.project-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   PROJECT TEXT
+========================================================= */
+
+.project-card p {
+    position: relative;
+    z-index: 2;
+
+    color: #b4b4bb;
+
+    line-height: 1.7;
+}
+
+.project-title {
+    color: #5b8cff; /* blue */
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.project-description {
+    color: #b8beca;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+    font-style: italic;
+}
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.project-card a {
+    position: relative;
+    z-index: 2;
+
+    margin-top: auto;
+    padding-top: 28px;
+
+    color: var(--blue-light);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-card a:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SKILLS — BLACK
+========================================================= */
+
+#skills,
+.skills-section {
+    position: relative;
+
+    max-width: none;
+
+    background: #050505;
+    color: white;
+
+    padding-top: 110px;
+
+    padding-left:
+        max(
+            30px,
+            calc((100vw - 1140px) / 2)
+        );
+
+    padding-right:
+        max(
+            30px,
+            calc((100vw - 1140px) / 2)
+        );
+}
+
+
+/* =========================================================
+   SKILLS CONTENT
+========================================================= */
+
+#skills > *,
+.skills-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SKILLS HEADINGS
+========================================================= */
+
+#skills h2,
+.skills-section h2 {
+    color: white;
+}
+
+#skills .section-label,
+.skills-section .section-label {
+    color: var(--blue-light);
+}
+
+#skills > p:not(.section-label),
+.skills-section > p:not(.section-label) {
+    color: #a9a9b0;
+}
+
+
+/* =========================================================
+   SKILL PILLS
+========================================================= */
+
+.skills {
+    margin-top: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 11px;
+}
+
+.skills span {
+    position: relative;
+
+    padding: 10px 17px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius: 999px;
+
+    background: #0d0d0f;
+
+    color: #e7e7ea;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.skills span:hover {
+    transform: translateY(-3px);
+
+    color: white;
+
+    border-color:
+        rgba(49, 85, 255, 0.55);
+
+    box-shadow:
+        0 10px 30px
+        rgba(49, 85, 255, 0.12);
+}
+
+
+/* =========================================================
+   CONTACT — BLUE-TINTED WHITE
+========================================================= */
+
+#contact,
+.contact {
+    position: relative;
+
+    background: var(--white-blue-3);
+
+    padding-top: 110px;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+#contact > *,
+.contact > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTACT PANEL
+========================================================= */
+
+.contact-panel {
+    position: relative;
+
+    margin-top: 45px;
+
+    padding: 50px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(49, 85, 255, 0.16);
+
+    border-radius: var(--radius-lg);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(20, 25, 35, 0.10);
+}
+
+
+/* =========================================================
+   CONTACT PANEL ACCENT
+========================================================= */
+
+.contact-panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+    right: 8%;
+
+    height: 2px;
+
+    background: var(--blue);
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   NO CONTACT GLOW
+========================================================= */
+
+.contact-panel::after {
+    display: none;
+}
+
+
+/* =========================================================
+   FOOTER — BLACK
+========================================================= */
+
+footer {
+    position: relative;
+
+    max-width: none;
+
+    margin: 0;
+
+    padding:
+        35px
+        max(30px, calc((100vw - 1140px) / 2));
+
+    background: #050505;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    color: #85858d;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+========================================================= */
+
+footer > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--blue-light);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline:
+        3px solid
+        rgba(49, 85, 255, 0.45);
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    nav {
+        min-height: 70px;
+        padding: 12px 20px;
+    }
+
+    .logo,
+    .logo img {
+        width: 125px;
+        height: 55px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            95px
+            20px
+            100px;
+    }
+
+    .hero::before {
+        top: 55px;
+        right: 20px;
+
+        width: 65px;
+        height: 3px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                44px,
+                12vw,
+                68px
+            );
+
+        letter-spacing: -2.5px;
+    }
+
+    h2 {
+        font-size: 36px;
+        letter-spacing: -1.2px;
+    }
+
+    .section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #about,
+    .about,
+    #skills,
+    .skills-section {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        padding-top: 85px;
+    }
+
+    #projects,
+    .projects {
+        padding-top: 85px;
+        padding-bottom: 100px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #contact,
+    .contact {
+        padding-top: 85px;
+    }
+
+    .contact-panel {
+        padding: 35px;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding:
+            80px
+            20px
+            90px;
+    }
+
+    .hero::before {
+        top: 45px;
+
+        width: 50px;
+        height: 3px;
+    }
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                40px,
+                13.5vw,
+                56px
+            );
+
+        letter-spacing: -2px;
+    }
+
+    .intro {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    #projects,
+    .projects {
+        padding-top: 75px;
+        padding-bottom: 85px;
+    }
+
+    .project-card {
+        min-height: 275px;
+
+        padding: 25px;
+
+        border-radius: 14px;
+
+        background: #0d0d0f;
+
+        box-shadow:
+            inset 0 1px 0
+            rgba(255, 255, 255, 0.06);
+    }
+
+    .project-card h3 {
+        font-size: 22px;
+    }
+
+    #skills,
+    .skills-section {
+        padding-top: 75px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    #contact,
+    .contact {
+        padding-top: 75px;
+    }
+
+    .contact-panel {
+        padding: 28px;
+        border-radius: 14px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* Project Evidence Gallery */
+
+.workflow-image {
+    margin-top: 30px;
+}
+
+.workflow-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.image-caption {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.evidence-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.evidence-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.evidence-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.evidence-item h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.evidence-item p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .evidence-gallery {
+        grid-template-columns: 1fr;
+    }
+}
