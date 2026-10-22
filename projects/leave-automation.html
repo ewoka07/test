@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leave Approval Automation | HR Technology Portfolio</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo trp final 1.png" alt="HR Technology Portfolio">
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    HR TECHNOLOGY • POWER AUTOMATE • WORKFLOW AUTOMATION
+                </p>
+
+                <h1>
+                    Leave Approval <span class="gradient-text">Automation</span>
+                </h1>
+
+                <p class="intro">
+                    HR workflow automation project designed to streamline
+                    employee leave requests, approval routing, notifications,
+                    and calendar management.
+                </p>
+
+    <div class="workflow-image">
+        <img src="../assets/leave-automation/pic-0-leave-flow.png"
+             alt="End-to-end leave approval automation workflow">
+
+        <p class="image-caption">
+            End-to-end leave automation workflow — employee submission,
+            conditional approval routing, notifications, and calendar recording.
+        </p>
+    </div>
+
+</section>
+
+        <!-- Overview -->
+        <section class="section">
+
+            <p class="section-label">PROJECT OVERVIEW</p>
+
+            <h2>
+                Automating the employee leave approval process
+            </h2>
+
+            <p>
+                The project automated the end-to-end leave request process,
+                from employee submission through approval, employee notification,
+                and shared calendar recording.
+            </p>
+
+            <p>
+                The workflow was designed to apply different approval rules
+                depending on the type of leave requested.
+            </p>
+
+        </section>
+
+
+        <!-- Business Problem -->
+        <section class="section">
+
+            <p class="section-label">BUSINESS PROBLEM</p>
+
+            <h2>
+                Reducing manual HR administration
+            </h2>
+
+            <p>
+                Manual leave requests can create delays, inconsistent approval
+                routing, duplicate communication, and limited visibility into
+                approved employee absences.
+            </p>
+
+            <p>
+                The objective was to create a standardized workflow that could
+                automatically route requests according to HR approval rules
+                while keeping employees and managers informed.
+            </p>
+
+        </section>
+
+
+        <!-- Solution -->
+        <section class="section">
+
+            <p class="section-label">SOLUTION</p>
+
+            <h2>
+                Microsoft-based HR workflow automation
+            </h2>
+
+            <p>
+                I designed and configured an automated leave-management workflow
+                using Microsoft Forms, Power Automate, Microsoft Teams,
+                Outlook, and a shared Outlook calendar.
+            </p>
+
+            <div class="skills">
+
+                <span>Microsoft Forms</span>
+                <span>Power Automate</span>
+                <span>Microsoft Teams</span>
+                <span>Outlook</span>
+                <span>Shared Calendar</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Workflow -->
+        <section class="section">
+
+            <p class="section-label">WORKFLOW</p>
+
+            <h2>
+                End-to-end approval process
+            </h2>
+
+            <p>
+                The workflow begins when an employee submits a leave request
+                through Microsoft Forms.
+            </p>
+
+            <p>
+                Power Automate evaluates the leave type and determines the
+                appropriate approval path.
+            </p>
+
+            <p>
+                <strong>Paid Time Off / Company Leave:</strong><br>
+                Employee → Supervisor Approval → Employee Notification → Shared Calendar
+            </p>
+
+            <p>
+                <strong>Other Leave Types:</strong><br>
+                Employee → Supervisor Approval → HR Manager Approval →
+                Employee Notification → Shared Calendar
+            </p>
+
+        </section>
+
+
+        <!-- Approval Logic -->
+        <section class="section">
+
+            <p class="section-label">BUSINESS RULES</p>
+
+            <h2>
+                Conditional and sequential approval routing
+            </h2>
+
+            <p>
+                The workflow incorporated different approval requirements
+                based on the employee's selected leave type.
+            </p>
+
+            <p>
+                For standard paid time off and company leave, requests were
+                routed directly to the supervisor.
+            </p>
+
+            <p>
+                For other leave categories, the workflow required two
+                sequential approvals: supervisor approval followed by
+                HR manager approval.
+            </p>
+
+        </section>
+
+
+        <!-- Troubleshooting -->
+        <section class="section">
+
+            <p class="section-label">TROUBLESHOOTING</p>
+
+            <h2>
+                Workflow testing and issue resolution
+            </h2>
+
+            <p>
+                During testing, I identified and resolved three workflow issues
+                affecting the approval process.
+            </p>
+
+            <p>
+                <strong>01 — Environment / Dataverse issue</strong><br>
+                Identified an environment configuration dependency that prevented
+                the approval action from being initiated. I provisioned Dataverse
+                in the Power Platform environment so the approval action could
+                function correctly.
+            </p>
+
+            <p>
+                <strong>02 — Sequential approval logic issue</strong><br>
+                Identified incorrect workflow logic that prevented the
+                sequential approval path from functioning correctly.
+            </p>
+
+            <p>
+                <strong>03 — Approval outcome / routing issue</strong><br>
+                Corrected the workflow logic used to route approval outcomes.
+                During testing, approved requests were incorrectly triggering
+                rejection notifications. I corrected the logic so approval
+                outcomes were routed to the appropriate next step and employee
+                notification.
+            </p>
+
+        </section>
+<section class="section">
+
+    <p class="section-label">PROJECT VISUALS</p>
+
+    <h2>Build, Testing & Troubleshooting Visuals</h2>
+
+    <p>
+        Selected evidence from the design, configuration, testing,
+        troubleshooting, and successful implementation of the leave
+        approval automation.
+    </p>
+
+    <div class="evidence-gallery">
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-2-ms-form.png"
+                 alt="Microsoft Forms leave request">
+            <h3>Employee Intake</h3>
+            <p>
+                Microsoft Forms captures the information required to initiate
+                the HR leave workflow.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-1-calendar.png"
+                 alt="Shared Outlook leave calendar">
+            <h3>Calendar Integration</h3>
+            <p>
+                Approved leave is recorded on a shared Outlook calendar
+                to improve absence visibility.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-3-dataverse-error.png"
+                 alt="Dataverse environment error">
+            <h3>Environment Troubleshooting</h3>
+            <p>
+                Identified a Dataverse dependency that prevented the approval
+                action from running.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-4-dataverse-configuration.png"
+                 alt="Power Platform Dataverse configuration">
+            <h3>Power Platform Configuration</h3>
+            <p>
+                Configured Dataverse in the environment to enable the required
+                approval functionality.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-5-successful-non-sequential.png"
+                 alt="Successful single approval workflow">
+            <h3>Single-Level Approval</h3>
+            <p>
+                PTO and company leave requests are routed directly to
+                the supervisor.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-6-sequential-error.png"
+                 alt="Sequential approval workflow error">
+            <h3>Sequential Approval Testing</h3>
+            <p>
+                Testing identified an issue preventing the two-level approval
+                path from executing correctly.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-7-successful-sequential.png"
+                 alt="Successful sequential approval workflow">
+            <h3>Successful Sequential Approval</h3>
+            <p>
+                Other leave types route from supervisor approval to HR
+                manager approval.
+            </p>
+        </div>
+
+        <div class="evidence-item">
+            <img src="../assets/leave-automation/pic-9-employee-notification.png"
+                 alt="Employee email notification">
+            <h3>Automated Employee Notification</h3>
+            <p>
+                Employees receive an automated email after the approval
+                process reaches its final outcome.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- Process -->
+        <section class="section">
+
+            <p class="section-label">PROCESS</p>
+
+            <h2>
+                Build → Test → Troubleshoot → Validate
+            </h2>
+
+            <p>
+                The workflow was developed and tested iteratively to validate
+                both the standard and sequential approval paths.
+            </p>
+
+            <p>
+                Testing focused on approval routing, approval outcomes,
+                employee notifications, and calendar recording.
+            </p>
+
+        </section>
+
+
+        <!-- Outcome -->
+        <section class="section">
+
+            <p class="section-label">OUTCOME</p>
+
+            <h2>
+                A standardized digital leave workflow
+            </h2>
+
+            <p>
+                The completed workflow provided a structured process for
+                submitting, routing, approving, notifying, and recording
+                employee leave requests.
+            </p>
+
+            <p>
+                The solution also demonstrated how HR business rules can be
+                translated into automated workflow logic while maintaining
+                appropriate approval controls.
+            </p>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section class="section">
+
+            <p class="section-label">SKILLS DEMONSTRATED</p>
+
+            <h2>
+                HR technology capabilities
+            </h2>
+
+            <div class="skills">
+
+                <span>Business Analysis</span>
+                <span>Solution Design</span>
+                <span>Workflow Configuration</span>
+                <span>Process Improvement</span>
+                <span>Requirements Translation</span>
+                <span>Conditional Logic</span>
+                <span>Sequential Approvals</span>
+                <span>Workflow Testing</span>
+                <span>Troubleshooting</span>
+                <span>Employee Experience</span>
+                <span>Stakeholder Management</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tools -->
+        <section class="section">
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>
+                Technology stack
+            </h2>
+
+            <div class="skills">
+
+                <span>Power Automate</span>
+                <span>Microsoft Forms</span>
+                <span>Microsoft Teams</span>
+                <span>Outlook</span>
+                <span>Power Platform</span>
+                <span>Dataverse</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Back -->
+        <section class="section">
+
+            <a href="../index.html#projects" class="button">
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Enam Woka. HR Technology Portfolio.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
